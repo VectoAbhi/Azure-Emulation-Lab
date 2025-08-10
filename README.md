@@ -41,11 +41,15 @@ A hands-on Azure lab used to emulate realistic attacker behavior and then shrink
 - Documented repeatable IR flows that reduced decision time during simulations.
 
 ## How to reproduce
-- Deploy the lab templates in separate Azure subscriptions or resource groups.
+- Deploy the lab templates into separate Azure subscriptions or resource groups.
 
-- Run the scan profiles and ATT&CK techniques listed in /docs/runbooks.
+- Execute scan profiles with OpenVAS and Nmap; validate exposed services and outdated packages.
 
-- Apply the hardening baselines and re-scan for delta results.
+- Emulate the ATT&CK techniques listed in the MITRE section (e.g., service exposure, permissive role assignments, public storage access).
+
+- Apply hardening steps: tighten NSGs, review IAM role scope, and remove unused public endpoints.
+
+- Re-scan and document before/after results with screenshots.
 
 ## MITRE ATT&CK coverage
 T1190 Exploit Public-Facing Application, T1068 Privilege Escalation, T1046 Network Service Discovery, T1078 Valid Accounts, T1041 Exfiltration Over C2 Channel.
